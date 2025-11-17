@@ -1,76 +1,87 @@
 # Ex.No:1(A) INTRODUCTION TO JAVA PROGRAMMING, DATA TYPES, VARIABLES AND OPERATORS
 
 ## QUESTION:
+Lovely is a treasure hunter and has reached the final chamber of the dungeon. To unlock the treasure chest, she must enter a secret 4-digit code.
 
-Lovely found a magic machine that tells her how two numbers relate to each other.
-The machine supports all 6 relational operators:
+A riddle appears on the wall:
 
-Operator	Meaning
+"The code is hidden in the numbers you enter. Solve these puzzles to form it!"
 
-==	Is equal to
+The puzzle has 4 steps:
 
-!=	Is not equal to
+First digit = sum of the first two numbers
 
-Greater than >
+Second digit = difference between the third and fourth numbers
 
-<	Less than
+Third digit = product of the second and fourth numbers
 
-Greater than or equal to >=
+Fourth digit = remainder when third number is divided by first number
 
-<=	Less than or equal to
+Input Format:
+Enter four numbers as input (integers):
 
-Lovely enters two numbers. The machine prints the result (true or false) for each operator.
+<number1>
+<number2>
+<number3>
+<number4>
+Output Format:
+
+The treasure code
+The treasure code is: <digit1><digit2><digit3><digit4>
 
 ## AIM:
-To read two integers from the user and display the results of all relational comparisons between them.
+To write a Java program that reads four integer inputs from the user, performs arithmetic operations (addition, subtraction, multiplication, and modulus), and combines the results to display a treasure code.
 
 ## ALGORITHM :
-1. Start the program and read two integers from the user.
-2. Store the first value in variable **a** and the second value in **b**.
-3. Compare **a** and **b** for equality, inequality, greater than and less than.
-4. Compare **a** and **b** for greater-than-or-equal-to and less-than-or-equal-to.
-5. Display all comparison results to the user and stop.
-
-
-
+1.	Start the program and create a Scanner object.
+2.	Read four integer inputs from the user.
+3.	Compute digit1, digit2, digit3, and digit4 using +, -, *, and % operations.
+4.	Concatenate and print the treasure code.
+5.	Stop the program.
 
 ## PROGRAM:
  ```
 /*
 Program to implement variables and Operators using Java
-Developed by: Rishab p doshi
-RegisterNumber:  212224240134
+Developed by: RISHAB P DOSHI
+RegisterNumber: 212224240134 
 */
-
 ```
 
 ## Sourcecode.java:
 ```
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-import java.util.*;
-public class main{
-public static void main(String[] args){
-Scanner sc = new Scanner(System.in);
-int a = sc.nextInt();
-int b= sc.nextInt();
-System.out.println("a == b: "+(a==b));
-System.out.println("a != b: "+(a!=b));
-System.out.println("a > b: "+(a>b));
-System.out.println("a < b: "+(a<b));
-System.out.println("a >= b: "+(a>=b));
-System.out.println("a <= b: "+(a<=b));
-}}
+        int number1 = Integer.parseInt(scanner.nextLine());
+        int number2 = Integer.parseInt(scanner.nextLine());
+        int number3 = Integer.parseInt(scanner.nextLine());
+        int number4 = Integer.parseInt(scanner.nextLine());
 
+        int digit1 = number1 + number2;
+        int digit2 = number3 - number4;
+        int digit3 = number2 * number4;
+        int digit4 = number3 % number1;
+
+        System.out.println("The treasure code is: " + digit1 + "" + digit2 + "" + digit3 + "" + digit4);
+
+        scanner.close();
+    }
+}
 ```
+
+
 
 
 
 
 ## OUTPUT:
-
-<img width="442" height="259" alt="image" src="https://github.com/user-attachments/assets/02d91517-53b5-4ac8-9e5a-f4da9f940515" />
+<img width="1158" height="518" alt="image" src="https://github.com/user-attachments/assets/c58c4aea-a5d2-4032-afb3-dc765bd0f33b" />
 
 
 ## RESULT:
-The program successfully accepted two integers from the user and displayed the outcomes of all relational comparison operations (==, !=, >, <, >=, <=).
+Thus, the Java program to generate a treasure code using arithmetic operations on four user inputs was successfully executed and the output was verified.
+
